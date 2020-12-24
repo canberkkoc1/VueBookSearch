@@ -5,7 +5,7 @@
         <b-input-group>
           <b-form-input v-model="book_query" @keyup.enter ="fetchBooks"></b-form-input>
           <b-input-group-append>
-            <b-button variant="info" @click="fetchBooks"><b-icon icon="Search"></b-icon></b-button>
+            <b-button variant="info" @click="fetchBooks" class="outline:none"><b-icon icon="Search" ></b-icon></b-button>
           </b-input-group-append>
         </b-input-group>
       </div>
@@ -53,7 +53,6 @@ export default {
     },
     ShowResults(results){
       this.books = results;
-      console.log(this.books)
     }
   },
   filters:{
@@ -89,5 +88,9 @@ export default {
   grid-gap: 5rem;
   display: grid;
   grid-template-columns: repeat(5 , 1fr);
+}
+.b-button{
+ outline: none; box-shadow: none;
+
 }
 </style>
